@@ -9,7 +9,8 @@ Main
 
 <details><summary>Animation</summary>
 <p float="left">
-  https://github.com/AnthonyJustt/LJReader/blob/main/screens/app-light.mp4
+  <video src='https://github.com/AnthonyJustt/LJReader/blob/main/screens/app-light.mp4' width=180/>
+  
 </p>
 </details>
 
