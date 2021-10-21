@@ -10,6 +10,11 @@ Main
 <details><summary>Animation</summary>
 
   https://user-images.githubusercontent.com/83954616/138277621-f142b584-61d3-478b-8593-472c99bee252.mp4
+  
+
+https://user-images.githubusercontent.com/83954616/138279095-a8c8bd1d-d012-4211-bbbd-c1d11399d6ce.mp4
+
+
 
 </details>
 
