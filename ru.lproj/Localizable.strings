@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings - RU
+  habr
+
+  Created by Anton Krivonozhenkov on 05.05.2021.
+  
+*/
+
+"MenuView.Tags" = "Теги";
+"MenuView.Calendar" = "Календарь";
+"MenuView.Search" = "Поиск";
+"MenuView.AppVersion" = "Версия";

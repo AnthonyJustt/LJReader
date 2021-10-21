@@ -11,15 +11,15 @@ struct MenuView: View {
         VStack(alignment: .leading) {
             
             NavigationLink(destination: TagsView()) {
-                BlurMenuButton(imageName: "tag", buttonName: "Теги", paddingNumber: 45)
+                BlurMenuButton(imageName: "tag", buttonName: "MenuView.Tags", paddingNumber: 45)
             }
             
             NavigationLink(destination: ArchiveView()) {
-                BlurMenuButton(imageName: "calendar", buttonName: "Календарь", paddingNumber: 0)
+                BlurMenuButton(imageName: "calendar", buttonName: "MenuView.Calendar", paddingNumber: 0)
             }
             
             NavigationLink(destination: EmptyView()) {
-                BlurMenuButton(imageName: "magnifyingglass", buttonName: "Поиск", paddingNumber: 0)
+                BlurMenuButton(imageName: "magnifyingglass", buttonName: "MenuView.Search", paddingNumber: 0)
             }
             Spacer()
             NavigationLink(destination: AboutView()) {
@@ -30,11 +30,14 @@ struct MenuView: View {
                         VStack(alignment: .leading, spacing: 6) {
                             Text("LJreader")
                                 .fontWeight(.semibold)
-                            Text("App Version 1.0")
-                                .font(.caption)
-                                .fontWeight(.semibold)
-                             //   .foregroundColor(.white)
-                                .opacity(0.6)
+                            HStack {
+                                Text(LocalizedStringKey("MenuView.AppVersion"))
+                                Text("1.0")
+                            }
+                            .font(.caption)
+                          //  .fontWeight(.semibold)
+                            //   .foregroundColor(.white)
+                            .opacity(0.6)
                         }
                         .padding()
                         Spacer()
@@ -44,12 +47,6 @@ struct MenuView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-    }
-}
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
     }
 }
 
@@ -69,11 +66,18 @@ struct BlurMenuButton: View {
                     .foregroundColor(.gray)
                     .imageScale(.large)
                     .padding()
-                Text(buttonName)
+                Text(LocalizedStringKey(buttonName))
                     .foregroundColor(Color("FontColor"))
                 Spacer()
             }
             .padding(.top, paddingNumber)
         }
+    }
+}
+
+struct MenuView_Previews: PreviewProvider {
+    static var previews: some View {
+        MenuView()
+            //.environment(\.locale, .init(identifier: "ru"))
     }
 }
