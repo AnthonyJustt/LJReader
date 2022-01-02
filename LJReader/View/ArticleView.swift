@@ -21,43 +21,46 @@ struct ArticleView: View {
     var body: some View {
         ZStack {
             
-            RoundedRectangle(cornerRadius: 15)
-                .background(.ultraThinMaterial)
-                .frame(width: 75, height: 75)
-                .opacity(isHidden ? 0 : 1)
+//            RoundedRectangle(cornerRadius: 15)
+//                .background(.ultraThinMaterial)
+//                .frame(width: 75, height: 75)
+//                .opacity(isHidden ? 0 : 1)
             
-            ProgressView()
-                .colorScheme(.dark)
-                .opacity(isHidden ? 0 : 1)
-                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                            .onAppear(perform: {
-                                if firstLoad == true {
-            
-                                    let workItemFeed = DispatchWorkItem {
-                                        print("Task 1 started")
-                                        RequestedString = fparseArticle(fhtml: fname(furl: StringURL))
-                                        print("Task 1 finished")
-                                        withAnimation{
-                                            isHidden.toggle()
-                                        }
-                                    }
-            
-                                    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30) {
-                                        workItemFeed.cancel()
-                                        print("feed - cancelled")
-                                    }
-            
-                               //     concurrentQueue.async(execute: workItemFeed)
-                                    firstLoad = false
-                                }
-                            })
+//            ProgressView()
+//                .colorScheme(.dark)
+//                .opacity(isHidden ? 0 : 1)
+//                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+//                            .onAppear(perform: {
+//                                if firstLoad == true {
+//
+//                                    let workItemFeed = DispatchWorkItem {
+//                                        print("Task 1 started")
+//                                        RequestedString = fparseArticle(fhtml: fname(furl: StringURL))
+//                                        print("Task 1 finished")
+//                                        withAnimation{
+//                                            isHidden.toggle()
+//                                        }
+//                                    }
+//
+//                                    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30) {
+//                                        workItemFeed.cancel()
+//                                        print("feed - cancelled")
+//                                    }
+//
+//                               //     concurrentQueue.async(execute: workItemFeed)
+//                                    firstLoad = false
+//                                }
+//                            })
             
             VStack {
-                WebView_(request: fparseArticle(fhtml: fname(furl: StringURL)))
+//                WebView_(request: fparseArticle(fhtml: fname(furl: StringURL)))
             //    WebView_(request: RequestedString)
+                
+                WebView_(request: StringURL)
+                
                 //    .frame(width: 300, height: 300)
             }
-            .opacity(isHidden ? 1 : 0)
+        //    .opacity(isHidden ? 1 : 0)
             .padding(.leading, 4)
             .overlay(
                 Button(action: {
