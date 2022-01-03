@@ -86,5 +86,14 @@ struct CornerModifier: ViewModifier {
 struct CustomStackView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
+        CustomStackView(titleView: {
+            Text("title")
+            
+        }, contentView: {
+            Text("\n\nContent\n\n\n")
+            
+        })
+            .padding()
     }
 }

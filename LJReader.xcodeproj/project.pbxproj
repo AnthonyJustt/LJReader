@@ -12,10 +12,15 @@
 		495B15412782FD2200A0A0A8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B15402782FD2200A0A0A8 /* ViewModel.swift */; };
 		495B154327831FD700A0A0A8 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B154227831FD700A0A0A8 /* LoaderView.swift */; };
 		495B15452783213800A0A0A8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B15442783213800A0A0A8 /* SearchView.swift */; };
+		495B154927834BEF00A0A0A8 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B154727834BEF00A0A0A8 /* ViewControllerResolver.swift */; };
+		495B154A27834BEF00A0A0A8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B154827834BEF00A0A0A8 /* SearchBar.swift */; };
+		495B1551278355DA00A0A0A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B1550278355DA00A0A0A8 /* WidgetKit.framework */; };
+		495B1553278355DA00A0A0A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495B1552278355DA00A0A0A8 /* SwiftUI.framework */; };
+		495B1556278355DB00A0A0A8 /* LJReaderWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B1555278355DB00A0A0A8 /* LJReaderWidget.swift */; };
+		495B1558278355DD00A0A0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495B1557278355DD00A0A0A8 /* Assets.xcassets */; };
+		495B155C278355DD00A0A0A8 /* LJReaderWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 495B154F278355DA00A0A0A8 /* LJReaderWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4962B22C272176B200AED7E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4962B22A272176B200AED7E8 /* Localizable.strings */; };
 		4962B22F272176B900AED7E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4962B22D272176B900AED7E8 /* Localizable.strings */; };
-		497A04412708A19E00FF006D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A04402708A19E00FF006D /* SearchBar.swift */; };
-		497A04432708A1AD00FF006D /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A04422708A1AD00FF006D /* ViewControllerResolver.swift */; };
 		497A04472708C47800FF006D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A04462708C47800FF006D /* MenuView.swift */; };
 		497A04492708FD7E00FF006D /* ContextMenuWithPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A04482708FD7E00FF006D /* ContextMenuWithPreview.swift */; };
 		497A044B2709AA3A00FF006D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A044A2709AA3A00FF006D /* CalendarView.swift */; };
@@ -36,17 +41,47 @@
 		49EF63BB270C7D07008D009D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EF63BA270C7D06008D009D /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		495B155A278355DD00A0A0A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49EC4C4F2701A90C0013E9CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 495B154E278355DA00A0A0A8;
+			remoteInfo = LJReaderWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		495B1560278355DD00A0A0A8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				495B155C278355DD00A0A0A8 /* LJReaderWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4914563D270736D80019DBD1 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		495B153E2782FD0D00A0A0A8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		495B15402782FD2200A0A0A8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		495B154227831FD700A0A0A8 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		495B15442783213800A0A0A8 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		495B154727834BEF00A0A0A8 /* ViewControllerResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
+		495B154827834BEF00A0A0A8 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		495B154F278355DA00A0A0A8 /* LJReaderWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LJReaderWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		495B1550278355DA00A0A0A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		495B1552278355DA00A0A0A8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		495B1555278355DB00A0A0A8 /* LJReaderWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJReaderWidget.swift; sourceTree = "<group>"; };
+		495B1557278355DD00A0A0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		495B1559278355DD00A0A0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49616F172705E5A40050E65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4962B22B272176B200AED7E8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		4962B22E272176B900AED7E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
-		497A04402708A19E00FF006D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		497A04422708A1AD00FF006D /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
 		497A04462708C47800FF006D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		497A04482708FD7E00FF006D /* ContextMenuWithPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuWithPreview.swift; sourceTree = "<group>"; };
 		497A044A2709AA3A00FF006D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -69,6 +104,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		495B154C278355DA00A0A0A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495B1553278355DA00A0A0A8 /* SwiftUI.framework in Frameworks */,
+				495B1551278355DA00A0A0A8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49EC4C542701A90C0013E9CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +132,25 @@
 				495B154227831FD700A0A0A8 /* LoaderView.swift */,
 			);
 			path = "WebView with Loader";
+			sourceTree = "<group>";
+		};
+		495B154627834BEF00A0A0A8 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				495B154727834BEF00A0A0A8 /* ViewControllerResolver.swift */,
+				495B154827834BEF00A0A0A8 /* SearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		495B1554278355DA00A0A0A8 /* LJReaderWidget */ = {
+			isa = PBXGroup;
+			children = (
+				495B1555278355DB00A0A0A8 /* LJReaderWidget.swift */,
+				495B1557278355DD00A0A0A8 /* Assets.xcassets */,
+				495B1559278355DD00A0A0A8 /* Info.plist */,
+			);
+			path = LJReaderWidget;
 			sourceTree = "<group>";
 		};
 		4962B2272721769B00AED7E8 /* Local */ = {
@@ -115,18 +178,11 @@
 			path = ru;
 			sourceTree = "<group>";
 		};
-		497A043F2708A18900FF006D /* SearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				497A04402708A19E00FF006D /* SearchBar.swift */,
-				497A04422708A1AD00FF006D /* ViewControllerResolver.swift */,
-			);
-			path = SearchBar;
-			sourceTree = "<group>";
-		};
 		49A9413C2701BA6C00FE17DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				495B1550278355DA00A0A0A8 /* WidgetKit.framework */,
+				495B1552278355DA00A0A0A8 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,6 +217,7 @@
 				4962B2272721769B00AED7E8 /* Local */,
 				49A941542701BB7C00FE17DA /* Packages */,
 				49EC4C592701A90C0013E9CC /* LJReader */,
+				495B1554278355DA00A0A0A8 /* LJReaderWidget */,
 				49EC4C582701A90C0013E9CC /* Products */,
 				49A9413C2701BA6C00FE17DA /* Frameworks */,
 			);
@@ -170,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				49EC4C572701A90C0013E9CC /* LJReader.app */,
+				495B154F278355DA00A0A0A8 /* LJReaderWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,9 +235,9 @@
 		49EC4C592701A90C0013E9CC /* LJReader */ = {
 			isa = PBXGroup;
 			children = (
+				495B154627834BEF00A0A0A8 /* SearchBar */,
 				495B153D2782FCF300A0A0A8 /* WebView with Loader */,
 				49DED92B270DD6EF005F27BF /* View */,
-				497A043F2708A18900FF006D /* SearchBar */,
 				49616F172705E5A40050E65D /* Info.plist */,
 				49EC4C772701ACF00013E9CC /* Methods */,
 				49EC4C762701ACD60013E9CC /* Custom Stack View */,
@@ -230,6 +288,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		495B154E278355DA00A0A0A8 /* LJReaderWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 495B155D278355DD00A0A0A8 /* Build configuration list for PBXNativeTarget "LJReaderWidgetExtension" */;
+			buildPhases = (
+				495B154B278355DA00A0A0A8 /* Sources */,
+				495B154C278355DA00A0A0A8 /* Frameworks */,
+				495B154D278355DA00A0A0A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LJReaderWidgetExtension;
+			productName = LJReaderWidgetExtension;
+			productReference = 495B154F278355DA00A0A0A8 /* LJReaderWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		49EC4C562701A90C0013E9CC /* LJReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49EC4C652701A90F0013E9CC /* Build configuration list for PBXNativeTarget "LJReader" */;
@@ -237,10 +312,12 @@
 				49EC4C532701A90C0013E9CC /* Sources */,
 				49EC4C542701A90C0013E9CC /* Frameworks */,
 				49EC4C552701A90C0013E9CC /* Resources */,
+				495B1560278355DD00A0A0A8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				495B155B278355DD00A0A0A8 /* PBXTargetDependency */,
 			);
 			name = LJReader;
 			packageProductDependencies = (
@@ -257,9 +334,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					495B154E278355DA00A0A0A8 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					49EC4C562701A90C0013E9CC = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -280,11 +360,20 @@
 			projectRoot = "";
 			targets = (
 				49EC4C562701A90C0013E9CC /* LJReader */,
+				495B154E278355DA00A0A0A8 /* LJReaderWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		495B154D278355DA00A0A0A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495B1558278355DD00A0A0A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49EC4C552701A90C0013E9CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +388,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		495B154B278355DA00A0A0A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495B1556278355DB00A0A0A8 /* LJReaderWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49EC4C532701A90C0013E9CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,7 +409,9 @@
 				49EC4C5D2701A90C0013E9CC /* ContentView.swift in Sources */,
 				49EC4C5B2701A90C0013E9CC /* LJReaderApp.swift in Sources */,
 				497A044D2709AC3900FF006D /* ArchiveView.swift in Sources */,
+				495B154A27834BEF00A0A0A8 /* SearchBar.swift in Sources */,
 				497A04492708FD7E00FF006D /* ContextMenuWithPreview.swift in Sources */,
+				495B154927834BEF00A0A0A8 /* ViewControllerResolver.swift in Sources */,
 				495B15452783213800A0A0A8 /* SearchView.swift in Sources */,
 				495B15412782FD2200A0A0A8 /* ViewModel.swift in Sources */,
 				497A044B2709AA3A00FF006D /* CalendarView.swift in Sources */,
@@ -320,15 +419,21 @@
 				49EC4C6B2701AA8B0013E9CC /* ParsingMethods.swift in Sources */,
 				495B153F2782FD0D00A0A0A8 /* WebView.swift in Sources */,
 				498051D1270B3C4500D2D688 /* ArticlePreview.swift in Sources */,
-				497A04432708A1AD00FF006D /* ViewControllerResolver.swift in Sources */,
 				495B154327831FD700A0A0A8 /* LoaderView.swift in Sources */,
-				497A04412708A19E00FF006D /* SearchBar.swift in Sources */,
 				49EC4C742701ABBF0013E9CC /* Home.swift in Sources */,
 				4914563E270736D80019DBD1 /* TagsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		495B155B278355DD00A0A0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 495B154E278355DA00A0A0A8 /* LJReaderWidgetExtension */;
+			targetProxy = 495B155A278355DD00A0A0A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4962B22A272176B200AED7E8 /* Localizable.strings */ = {
@@ -350,6 +455,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		495B155E278355DD00A0A0A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3KBNB28AF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LJReaderWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LJReaderWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AK.LJReader.LJRWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		495B155F278355DD00A0A0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3KBNB28AF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LJReaderWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LJReaderWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AK.LJReader.LJRWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		49EC4C632701A90F0013E9CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,6 +632,7 @@
 		49EC4C662701A90F0013E9CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +664,7 @@
 		49EC4C672701A90F0013E9CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +696,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		495B155D278355DD00A0A0A8 /* Build configuration list for PBXNativeTarget "LJReaderWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				495B155E278355DD00A0A0A8 /* Debug */,
+				495B155F278355DD00A0A0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		49EC4C522701A90C0013E9CC /* Build configuration list for PBXProject "LJReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

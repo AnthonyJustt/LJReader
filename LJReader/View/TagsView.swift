@@ -46,7 +46,7 @@ struct TagsView: View {
                                 letsgetTags.cancel()
                                 print("tags - cancelled")
                             }
-
+                            
                             concurrentQueue.async(execute: letsgetTags)
                             firstLoad = false
                         }
@@ -54,9 +54,9 @@ struct TagsView: View {
                 
                 List{
                     ForEach(alphabet
-                            //                                    .filter{
-                            //                            searchBar.text.isEmpty || ($0.lowercased().contains(searchBar.text.lowercased().first!))
-                            //                        }
+                                .filter{
+                        searchBar.text.isEmpty || ($0.lowercased().contains(searchBar.text.lowercased().first!))
+                    }
                             , id: \.self) { letter in
                         if letter == alphabet.last {
                             Section(header: Text(letter), footer: HStack {
