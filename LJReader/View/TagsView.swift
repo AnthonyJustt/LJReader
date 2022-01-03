@@ -28,15 +28,8 @@ struct TagsView: View {
                     .ignoresSafeArea()
                     .opacity(isHidden ? 0 : 1)
                 
-                RoundedRectangle(cornerRadius: 15)
-                    .background(.ultraThinMaterial)
-                    .frame(width: 75, height: 75)
+                LoaderView()
                     .opacity(isHidden ? 0 : 1)
-                
-                ProgressView()
-                    .colorScheme(.dark)
-                    .opacity(isHidden ? 0 : 1)
-                    .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
                     .onAppear(perform: {
                         if firstLoad == true {
                             let letsgetTags = DispatchWorkItem {

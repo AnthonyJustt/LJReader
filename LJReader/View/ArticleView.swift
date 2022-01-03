@@ -11,64 +11,26 @@ import WebKit
 struct ArticleView: View {
     var StringURL: String = ""
     
-    @State private var RequestedString: String = "ghbdtn"
+    //    @State private var RequestedString: String = "ghbdtn"
+    //    let concurrentQueue = DispatchQueue(label: "content.loading.data", attributes: .concurrent)
+    //    @State private var isHidden:Bool = false
+    //    @State private var firstLoad: Bool = true
     
-    let concurrentQueue = DispatchQueue(label: "content.loading.data", attributes: .concurrent)
-    
-    @State private var isHidden:Bool = false
-    @State private var firstLoad: Bool = true
+    @ObservedObject var viewModel = ViewModel()
+    @State var showLoader = false
     
     var body: some View {
         ZStack {
-            
-//            RoundedRectangle(cornerRadius: 15)
-//                .background(.ultraThinMaterial)
-//                .frame(width: 75, height: 75)
-//                .opacity(isHidden ? 0 : 1)
-            
-//            ProgressView()
-//                .colorScheme(.dark)
-//                .opacity(isHidden ? 0 : 1)
-//                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-//                            .onAppear(perform: {
-//                                if firstLoad == true {
-//
-//                                    let workItemFeed = DispatchWorkItem {
-//                                        print("Task 1 started")
-//                                        RequestedString = fparseArticle(fhtml: fname(furl: StringURL))
-//                                        print("Task 1 finished")
-//                                        withAnimation{
-//                                            isHidden.toggle()
-//                                        }
-//                                    }
-//
-//                                    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30) {
-//                                        workItemFeed.cancel()
-//                                        print("feed - cancelled")
-//                                    }
-//
-//                               //     concurrentQueue.async(execute: workItemFeed)
-//                                    firstLoad = false
-//                                }
-//                            })
-            
             VStack {
-//                WebView_(request: fparseArticle(fhtml: fname(furl: StringURL)))
-            //    WebView_(request: RequestedString)
-                
-                WebView_(request: StringURL)
-                
-                //    .frame(width: 300, height: 300)
+                WebView(url: .parsedURL, StringURL: StringURL, viewModel: viewModel)
+                    .opacity(showLoader ? 0 : 1)
             }
-        //    .opacity(isHidden ? 1 : 0)
-            .padding(.leading, 4)
             .overlay(
                 Button(action: {
                     
                 }) {
                     Menu {
                         Button(action: {
-                            
                         }) {
                             Label("Комментарии", systemImage: "bubble.right")
                         }
@@ -99,8 +61,44 @@ struct ArticleView: View {
                     }
                 , alignment: .bottomTrailing
             )
+            .edgesIgnoringSafeArea(Edge.Set.bottom)
             .navigationTitle("Статья")
             .navigationBarTitleDisplayMode(.inline)
+            //            .navigationBarItems(trailing:
+            //                                    Button(action: {
+            //                self.viewModel.webViewNavigationPublisher.send(.reload)
+            //            }) {
+            //                Image(systemName: "arrow.clockwise")
+            //            })
+            
+            .onReceive(
+                self.viewModel.showLoader.receive(on: RunLoop.main)) { value in
+                    self.showLoader = value
+                }
+            
+            if showLoader {
+                LoaderView()
+                    .onAppear(perform: {
+                        //                    if firstLoad == true {
+                        //                        let workItemFeed = DispatchWorkItem {
+                        //                            print("Task 1 started")
+                        //                            RequestedString = fparseArticle(fhtml: fname(furl: StringURL))
+                        //                            print("Task 1 finished")
+                        //                            withAnimation{
+                        //                                isHidden.toggle()
+                        //                            }
+                        //                        }
+                        //
+                        //                        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 30) {
+                        //                            workItemFeed.cancel()
+                        //                            print("feed - cancelled")
+                        //                        }
+                        //
+                        //                        //     concurrentQueue.async(execute: workItemFeed)
+                        //                        firstLoad = false
+                        //                    }
+                    })
+            }
         }
     }
 }
@@ -108,7 +106,6 @@ struct ArticleView: View {
 struct WebView_ : UIViewRepresentable {
     let request: String
     var webview: WKWebView = WKWebView()
-    
     //    let requestURL: URLRequest
     
     class Coordinator: NSObject, WKNavigationDelegate {
@@ -132,15 +129,10 @@ struct WebView_ : UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> WKWebView  {
-        
-        
-        
         DispatchQueue.main.async {
             webview.navigationDelegate = context.coordinator
             webview.loadHTMLString(request, baseURL: nil)
         }
-        
-        
         
         webview.isOpaque = false // для темной темы, чтобы задний фон не был белым
         webview.backgroundColor = UIColor.clear  // для темной темы, чтобы задний фон не был белым
@@ -152,7 +144,6 @@ struct WebView_ : UIViewRepresentable {
 }
 
 struct blurView: UIViewRepresentable {
-    
     var cornerRadius: CGFloat = 0
     
     func makeUIView(context: Context) -> UIVisualEffectView {

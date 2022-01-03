@@ -18,7 +18,7 @@ struct MenuView: View {
                 BlurMenuButton(imageName: "calendar", buttonName: "MenuView.Calendar", paddingNumber: 0)
             }
             
-            NavigationLink(destination: EmptyView()) {
+            NavigationLink(destination: SearchView()) {
                 BlurMenuButton(imageName: "magnifyingglass", buttonName: "MenuView.Search", paddingNumber: 0)
             }
             Spacer()

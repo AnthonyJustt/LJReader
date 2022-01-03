@@ -21,7 +21,7 @@ struct ArchiveView: View {
         formatter.dateFormat = "yyyy"
         let dateString = formatter.date(from: selectedMenuItem)!
         
-       return  calendar.dateInterval(of: .year, for: dateString)!
+        return  calendar.dateInterval(of: .year, for: dateString)!
     }
     
     @State private var isHidden:Bool = false
@@ -30,15 +30,8 @@ struct ArchiveView: View {
     
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 15)
-                .background(.ultraThinMaterial)
-                .frame(width: 75, height: 75)
+            LoaderView()
                 .opacity(isHidden ? 0 : 1)
-            
-            ProgressView()
-                .colorScheme(.dark)
-                .opacity(isHidden ? 0 : 1)
-                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
                 .onAppear(perform: {
                     if firstLoad == true {
                         let letsgetTags = DispatchWorkItem {
