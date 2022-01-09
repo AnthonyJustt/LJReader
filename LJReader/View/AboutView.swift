@@ -36,9 +36,7 @@ struct AboutView: View {
                         Divider()
                             .padding(4)
                         ExternalLinkView(text: "WebView", link: "https://github.com/yamin335", name: "Md. Yamin")
-                        ExternalLinkView(text: "HTML Parser", link: "https://github.com/scinfu/SwiftSoup", name: "SwiftSoup")
-                        Divider()
-                            .padding(4)
+                        ExternalLinkView(text: "HTML Parser", link: "https://github.com/scinfu/SwiftSoup", name: "SwiftSoup") 
                     }
                 }
                 .padding()
